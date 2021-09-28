@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.banner {
+  height: 375px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.break {
+  margin: 21px 0 15px;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  font: 500 28px var(--font);
+}
+
+.description {
+  font: 400 22px var(--font);
+  max-width: 50%;
+  letter-spacing: 0.03em;
+}

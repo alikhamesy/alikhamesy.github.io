@@ -1,0 +1,28 @@
+img.loading {
+  display: none;
+}
+
+span.fallback {
+  --background-dark: #afafaf;
+  --background-light: #c4c4c4;
+
+  background: linear-gradient(
+    -45deg,
+    var(--background-dark) 30%,
+    var(--background-light) 50%,
+    var(--background-dark) 70%
+  );
+  background-size: 400% 100%;
+  animation: loading 2s ease-in-out 0s infinite;
+  display: grid;
+  place-items: center;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}

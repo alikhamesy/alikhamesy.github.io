@@ -1,0 +1,6 @@
+span.break {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+}
