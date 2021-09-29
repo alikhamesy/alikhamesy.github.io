@@ -6,15 +6,13 @@ import styles from './OrgCard.module.scss'
 const OrgCard = ({ src, name, description, breaks }) => {
   return (
     <>
-      {breaks && <Break />}
+      {breaks && <Break className={styles.break} />}
       <div className={styles.container}>
         <Image className={styles.logo} src={src} alt={`logo of ${name}`} />
-        <div className={styles.text}>
-          <div className={styles.name}>{name}</div>
-          <div className={styles.description}>{description}</div>
-        </div>
+        <div className={styles.name}>{name}</div>
+        <div className={styles.description}>{description}</div>
       </div>
-      {breaks && <Break />}{' '}
+      {breaks && <Break className={styles.break} />}
     </>
   )
 }

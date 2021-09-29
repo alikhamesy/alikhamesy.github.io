@@ -9,8 +9,6 @@ span.fallback {
   background: linear-gradient(-45deg, $dark 30%, $light 50%, $dark 70%);
   background-size: 450% 100%;
   animation: loading 2s ease-in-out 0s infinite;
-  display: grid;
-  place-items: center;
 }
 
 @keyframes loading {

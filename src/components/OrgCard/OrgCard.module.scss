@@ -1,0 +1,29 @@
+@use '../../index.scss' as *;
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.break {
+  margin: 20px 0;
+}
+
+.logo {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.name {
+  @include medium(48px);
+  flex: 2;
+  padding-left: 80px;
+}
+
+.description {
+  @include regular(22px);
+  flex: 3;
+}
