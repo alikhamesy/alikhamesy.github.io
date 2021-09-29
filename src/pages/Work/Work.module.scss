@@ -1,0 +1,8 @@
+@use '../../index.scss' as *;
+
+.container {
+  .projects {
+    @include semiBold(36px);
+    margin: 100px 0 50px;
+  }
+}

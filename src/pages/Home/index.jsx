@@ -3,28 +3,7 @@ import Break from '../../components/Break'
 
 import styles from './Home.module.scss'
 
-import wts from '../../assets/wts 1.png'
-
-const projects = [
-  {
-    src: wts,
-    name: 'Internship @ Microsoft',
-    description:
-      'Reduced overhead in creating full stack web apps by creating Web Template Studio.'
-  },
-  {
-    src: wts,
-    name: 'Internship @ Microsoft',
-    description:
-      'Reduced overhead in creating full stack web apps by creating Web Template Studio.'
-  },
-  {
-    src: wts,
-    name: 'Internship @ Microsoft',
-    description:
-      'Reduced overhead in creating full stack web apps by creating Web Template Studio.'
-  }
-]
+import { selectedProjects } from '../../assets/data'
 
 const Home = () => {
   return (
@@ -41,7 +20,7 @@ const Home = () => {
       </div>
       <Break />
       <div className={styles.projects}>Selected Work</div>
-      <Projects projects={projects} />
+      <Projects projects={selectedProjects} />
       <Break />
       <div className={styles.workTogether}>
         <div className={styles.subject}>Want to Work Together?</div>

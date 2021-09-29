@@ -9,6 +9,7 @@
   width: 100%;
   object-fit: cover;
   display: block;
+  border: 1px solid #000;
 }
 
 .break {
@@ -28,4 +29,9 @@
 .description {
   @include regular(22px);
   max-width: 50%;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
 }
