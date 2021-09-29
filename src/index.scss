@@ -53,16 +53,17 @@ $meta-color: #656565;
 
 @mixin font($font-size: 22px, $font-weight: 400) {
   font: $font-weight $font-size 'IBM Plex Sans', sans-serif;
+  letter-spacing: 0.03em;
 }
 
-@mixin normal($font-size: 24px) {
+@mixin regular($font-size) {
   @include font($font-size, 400);
 }
 
-@mixin medium($font-size: 24px) {
+@mixin medium($font-size) {
   @include font($font-size, 500);
 }
 
-@mixin semiBold($font-size: 24px) {
+@mixin semiBold($font-size) {
   @include font($font-size, 600);
 }
