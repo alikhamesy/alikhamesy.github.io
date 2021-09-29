@@ -1,7 +1,7 @@
+@import '../../index.scss';
+
 .container {
-  width: 100%;
-  max-width: 1250px;
-  margin: auto;
+  @include main-column;
 }
 
 .banner {
@@ -22,11 +22,11 @@
 }
 
 .title {
-  font: 500 28px var(--font);
+  @include medium(28px);
 }
 
 .description {
-  font: 400 22px var(--font);
+  @include normal(22px);
   max-width: 50%;
   letter-spacing: 0.03em;
 }

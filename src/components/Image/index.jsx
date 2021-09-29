@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import classNames from '../../utils/classNames'
 
-import styles from './Image.module.css'
+import styles from './Image.module.scss'
 
 const Fallback = props => {
   return (

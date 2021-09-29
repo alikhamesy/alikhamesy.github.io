@@ -1,6 +1,6 @@
 import Projects from '../../components/Projects'
 
-import styles from './Home.module.css'
+import styles from './Home.module.scss'
 
 import wts from '../../assets/wts 1.png'
 

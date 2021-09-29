@@ -1,5 +1,5 @@
 import Image from '../Image'
-import styles from './Project.module.css'
+import styles from './Project.module.scss'
 import Break from '../Break'
 
 const Project = ({ name, src, description }) => {

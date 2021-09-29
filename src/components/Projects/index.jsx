@@ -1,5 +1,5 @@
 import Project from '../Project'
-import styles from './Projects.module.css'
+import styles from './Projects.module.scss'
 
 const Projects = ({ projects }) => {
   return (
