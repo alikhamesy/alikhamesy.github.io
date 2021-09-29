@@ -1,7 +1,7 @@
 @use '../../index.scss' as *;
 
 .container {
-  @include main-column;
+  width: 100%;
 }
 
 .splash {

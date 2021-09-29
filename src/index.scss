@@ -1,3 +1,27 @@
+$meta-color: #656565;
+
+@mixin main-column() {
+  width: clamp(950px, 85%, 1250px);
+  margin: auto;
+}
+
+@mixin font($font-size: 22px, $font-weight: 400) {
+  font: $font-weight $font-size 'IBM Plex Sans', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+@mixin regular($font-size) {
+  @include font($font-size, 400);
+}
+
+@mixin medium($font-size) {
+  @include font($font-size, 500);
+}
+
+@mixin semiBold($font-size) {
+  @include font($font-size, 600);
+}
+
 body {
   margin: 0;
   font-family: 'IBM Plex Sans', sans-serif;
@@ -8,8 +32,7 @@ body {
 }
 
 #root {
-  width: 100%;
-  height: 100%;
+  @include main-column;
 }
 
 code {
@@ -42,28 +65,4 @@ a {
 button:hover,
 a:hover {
   cursor: pointer;
-}
-
-$meta-color: #656565;
-
-@mixin main-column() {
-  width: clamp(950px, 85%, 1250px);
-  margin: auto;
-}
-
-@mixin font($font-size: 22px, $font-weight: 400) {
-  font: $font-weight $font-size 'IBM Plex Sans', sans-serif;
-  letter-spacing: 0.03em;
-}
-
-@mixin regular($font-size) {
-  @include font($font-size, 400);
-}
-
-@mixin medium($font-size) {
-  @include font($font-size, 500);
-}
-
-@mixin semiBold($font-size) {
-  @include font($font-size, 600);
 }

@@ -1,0 +1,39 @@
+@use '../../index.scss' as *;
+
+.container {
+  width: 100%;
+}
+
+.splash {
+  display: flex;
+  align-items: center;
+  margin: 100px 0;
+
+  .profile {
+    width: 40%;
+    height: 480px;
+    object-fit: cover;
+  }
+
+  .intro {
+    width: 50%;
+    padding: 0 5%;
+
+    .title {
+      @include semiBold(36px);
+      margin-bottom: 24px;
+    }
+
+    .text {
+      @include regular(24px);
+    }
+  }
+}
+
+.activity,
+.story {
+  .title {
+    @include semiBold(36px);
+    margin: 40px 0;
+  }
+}

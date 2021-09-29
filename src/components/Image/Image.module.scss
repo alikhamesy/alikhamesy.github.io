@@ -3,16 +3,11 @@ img.loading {
 }
 
 span.fallback {
-  --background-dark: #afafaf;
-  --background-light: #c4c4c4;
+  $dark: #afafaf;
+  $light: #c4c4c4;
 
-  background: linear-gradient(
-    -45deg,
-    var(--background-dark) 30%,
-    var(--background-light) 50%,
-    var(--background-dark) 70%
-  );
-  background-size: 400% 100%;
+  background: linear-gradient(-45deg, $dark 30%, $light 50%, $dark 70%);
+  background-size: 450% 100%;
   animation: loading 2s ease-in-out 0s infinite;
   display: grid;
   place-items: center;
