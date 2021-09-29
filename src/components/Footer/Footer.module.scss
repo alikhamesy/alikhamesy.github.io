@@ -1,0 +1,23 @@
+@use '../../index.scss' as *;
+
+.container {
+  @include main-column;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 165px;
+}
+
+.message {
+  @include regular(18px);
+}
+
+.links {
+  @include semiBold(18px);
+  color: $meta-color;
+  display: flex;
+  gap: 65px;
+}

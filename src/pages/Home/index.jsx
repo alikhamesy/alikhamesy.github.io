@@ -31,8 +31,8 @@ const Home = () => {
     <div className={styles.container}>
       <div className={styles.splash}>
         <div className={styles.title}>
-          Hi I’m Ali, a Software Developer based out of Vancouver who’s
-          interested in Software Development
+          Hi I’m Ali, a 4th Year Computer Science Student based out of Vancouver
+          who’s interested in Software Development.
         </div>
         <div className={styles.subtitle}>
           Previously at Microsoft & SAP maybe there are more things you want to
@@ -50,8 +50,6 @@ const Home = () => {
           want to revolutionize and innovate for tomorrow.
         </div>
       </div>
-      <Break />
-      {/* Footer */}
     </div>
   )
 }
