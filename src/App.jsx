@@ -5,16 +5,14 @@ import Nav from './components/Nav'
 
 const App = () => {
   return (
-    <>
-      <Router>
-        <Nav />
-        <Switch>
-          <Route path='/' exact>
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
-    </>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route path='/' exact>
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 

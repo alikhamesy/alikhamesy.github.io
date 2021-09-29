@@ -17,9 +17,37 @@ code {
     monospace;
 }
 
+a,
+img,
+button,
+input {
+  display: block;
+}
+
+button,
+input {
+  font: inherit;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+$meta-color: #656565;
+
 @mixin main-column() {
-  width: 100%;
-  max-width: 1250px;
+  width: clamp(950px, 85%, 1250px);
   margin: auto;
 }
 

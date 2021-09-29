@@ -1,5 +1,16 @@
+@use '../../index.scss' as *;
+
 .container {
+  @include main-column;
   display: flex;
   justify-content: space-between;
-  width: 85%;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.links {
+  @include semiBold(18px);
+  color: $meta-color;
+  display: flex;
+  gap: 65px;
 }

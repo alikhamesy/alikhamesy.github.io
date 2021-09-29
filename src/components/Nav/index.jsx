@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom'
 
+import Image from '../Image'
+
 import styles from './Nav.module.scss'
 
 import logo from '../../assets/logo.svg'
 
-const Projects = ({ className }) => {
+const Nav = ({ className }) => {
   return (
     <div className={styles.container}>
-      <img src={logo} alt="Ali's Logo" />
+      <Link to='/'>
+        <Image src={logo} alt="Ali's Logo" />
+      </Link>
       <div className={styles.links}>
-        <Link to='/'>Home</Link>
         <Link to='/about'>About</Link>
         <Link to='/work'>Work</Link>
         <Link to='/resume'>Resume</Link>
@@ -19,4 +22,4 @@ const Projects = ({ className }) => {
   )
 }
 
-export default Projects
+export default Nav
