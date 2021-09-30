@@ -2,37 +2,45 @@
 
 .container {
   width: 100%;
-}
 
-.banner {
-  height: 375px;
-  width: 100%;
-  object-fit: cover;
-  display: block;
-  border: 1px solid #000;
-  @include theme-background(#fff, #000);
-}
+  .splash {
+    position: relative;
 
-.break {
-  margin: 21px 0 15px;
-}
+    .banner {
+      height: 375px;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      border: 1px solid #000;
+      @include theme-background(#fff, #000);
+    }
 
-.text {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
+    .chips {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      top: 10px;
+      left: 10px;
+      width: 45%;
+    }
+  }
 
-.title {
-  @include medium(28px);
-}
+  .break {
+    margin: 21px 0 15px;
+  }
 
-.description {
-  @include regular(22px);
-  max-width: 50%;
-}
+  .text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 
-.chips {
-  display: flex;
-  flex-wrap: wrap;
+    .title {
+      @include medium(28px);
+    }
+
+    .description {
+      @include regular(22px);
+      max-width: 50%;
+    }
+  }
 }

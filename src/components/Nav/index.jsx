@@ -13,6 +13,7 @@ const Nav = () => {
         <Image src={logo} className={styles.logo} alt="Ali's Logo" />
       </Link>
       <div className={styles.links}>
+        <Link to='/'>Home</Link>
         <Link to='/about'>About</Link>
         <Link to='/work'>Work</Link>
         <ExternalLink href='/Ali Khamesy Resume.pdf'>Resume</ExternalLink>

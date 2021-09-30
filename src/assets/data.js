@@ -14,31 +14,35 @@ const data = {
       name: 'Internship @ Microsoft',
       description:
         'Reduced overhead in creating full stack web apps by creating Web Template Studio.',
-      chips: ['React', 'Typescript', 'Redux', 'Vue', 'html/css']
+      chips: ['React', 'Typescript', 'Redux', 'Vue', 'HTML/CSS']
     },
     {
       src: wts,
       name: 'Internship @ Microsoft',
       description:
-        'Reduced overhead in creating full stack web apps by creating Web Template Studio.'
+        'Greatly improved user experience on OneDrive Mobile by creating zero term query features.',
+      chips: ['Android', 'Qt', 'Java', 'Kotlin']
     },
     {
       src: wts,
-      name: 'Internship @ Microsoft',
+      name: 'Internship @ SAP',
       description:
-        'Reduced overhead in creating full stack web apps by creating Web Template Studio.'
+        'Improving and reimagining UI development for SAP Analytics Cloud. Creating highly requested customer features.',
+      chips: ['SAPUI5', 'Webpack', 'Javascript', 'Jasmine', 'HTML/CSS']
     },
     {
       src: wts,
-      name: 'Internship @ Microsoft',
+      name: 'StormHacks Website',
       description:
-        'Reduced overhead in creating full stack web apps by creating Web Template Studio.'
+        'Lead development of the StormHacks website for over 1000 applicants and 10 sponsors to view',
+      chips: ['React', 'JavaScript', 'HTML/CSS']
     },
     {
       src: wts,
-      name: 'Internship @ Microsoft',
+      name: 'Pac Macro',
       description:
-        'Reduced overhead in creating full stack web apps by creating Web Template Studio.'
+        'Created a memorable experience for new university students by building Pac Macro, an augmented reality Pac Man game played on a 6 block by 6 block grid in downtown Vancouver',
+      chips: ['React', 'Javascript', 'Nodejs', 'React Native', 'HTML/CSS']
     }
   ]
 }
