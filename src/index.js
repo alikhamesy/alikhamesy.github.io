@@ -2,13 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
 import App from './App'
-import ScrollLockProvider from './contexts/ScrollLock'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ScrollLockProvider>
-      <App />
-    </ScrollLockProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 )

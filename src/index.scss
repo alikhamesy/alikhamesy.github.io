@@ -50,19 +50,18 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-  height: 100%;
   background: url('./assets/background.png') repeat;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: auto;
+
+  &.locked {
+    overflow: hidden;
+  }
 }
 
 #root {
   @include main-column;
-}
-
-#scrollContainer[data-locked='true'] {
-  overflow: hidden;
-  max-height: 100vh;
-  max-width: 100vw;
 }
 
 code {

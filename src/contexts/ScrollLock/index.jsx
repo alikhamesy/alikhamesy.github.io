@@ -5,7 +5,6 @@ const initial = { locks: 0, locked: false }
 export const ScrollContext = createContext(initial)
 
 const reducer = (state, action) => {
-  console.log(state, action)
   switch (action.type) {
     case 'LOCK':
       return {
