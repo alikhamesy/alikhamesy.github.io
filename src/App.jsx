@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { ScrollContext } from './contexts/ScrollLock'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './pages/Home'
@@ -7,26 +9,32 @@ import About from './pages/About'
 import Work from './pages/Work'
 import Gallery from './pages/Gallery'
 
+import './index.scss'
+
 const App = () => {
+  const { scroll } = useContext(ScrollContext)
+
   return (
-    <Router>
-      <Nav />
-      <Switch>
-        <Route path='/' exact>
-          <Home />
-        </Route>
-        <Route path='/about'>
-          <About />
-        </Route>
-        <Route path='/work'>
-          <Work />
-        </Route>
-        <Route path='/gallery'>
-          <Gallery />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
+    <div id='scrollContainer' data-locked={scroll.locked}>
+      <Router>
+        <Nav />
+        <Switch>
+          <Route path='/' exact>
+            <Home />
+          </Route>
+          <Route path='/about'>
+            <About />
+          </Route>
+          <Route path='/work'>
+            <Work />
+          </Route>
+          <Route path='/gallery'>
+            <Gallery />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </div>
   )
 }
 

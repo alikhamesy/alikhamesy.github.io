@@ -1,19 +1,20 @@
-import { useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import { ReactComponent as Close } from '../../assets/close.svg'
+import { ScrollContext } from '../../contexts/ScrollLock'
 
 import styles from './Modal.module.scss'
 
 const Modal = ({ children, onClose }) => {
   const ref = useRef(null)
 
+  const { dispatch } = useContext(ScrollContext)
+
   useEffect(() => {
-    //TODO: dispatch scroll lock
+    dispatch({ type: 'LOCK' })
     ref.current.focus()
-    return () => {
-      //TODO: dispatch scroll unlock
-      //Note: observer-producer pattern, dispatcher must keep track on number of lockers, unlock on 0.
-    }
-  }, [])
+
+    return () => dispatch({ type: 'UNLOCK' })
+  }, [dispatch])
 
   const escCloser = ({ key }) => key === 'Escape' && onClose()
 

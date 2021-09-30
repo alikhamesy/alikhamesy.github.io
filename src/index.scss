@@ -59,6 +59,12 @@ body {
   @include main-column;
 }
 
+#scrollContainer[data-locked='true'] {
+  overflow: hidden;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
