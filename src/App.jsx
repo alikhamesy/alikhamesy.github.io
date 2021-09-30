@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import About from './pages/About'
 import Work from './pages/Work'
+import Gallery from './pages/Gallery'
 
 const App = () => {
   return (
@@ -19,6 +20,9 @@ const App = () => {
         </Route>
         <Route path='/work'>
           <Work />
+        </Route>
+        <Route path='/gallery'>
+          <Gallery />
         </Route>
       </Switch>
       <Footer />

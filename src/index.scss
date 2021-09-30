@@ -22,6 +22,29 @@ $meta-color: #656565;
   @include font($font-size, 600);
 }
 
+@mixin theme-color($light-color, $dark-color) {
+  [data-theme='light'] & {
+    color: $light-color;
+  }
+  [data-theme='dark'] & {
+    color: $dark-color;
+  }
+}
+
+@mixin theme-background($light-background, $dark-background) {
+  [data-theme='light'] & {
+    background: $light-background;
+  }
+  [data-theme='dark'] & {
+    background: $dark-background;
+  }
+}
+
+@mixin theme-flip($light-color, $dark-color) {
+  @include theme-background($light-color, $dark-color);
+  @include theme-color($dark-color, $light-color);
+}
+
 body {
   margin: 0;
   font-family: 'IBM Plex Sans', sans-serif;

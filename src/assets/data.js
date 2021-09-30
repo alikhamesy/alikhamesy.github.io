@@ -4,7 +4,7 @@ const galleryResolver = require.context('./gallery', false, /.*\.jpg/)
 
 export const gallery = galleryResolver
   .keys()
-  .map(src => galleryResolver.resolve(src))
+  .map(src => galleryResolver(src).default)
 
 const data = {
   gallery,

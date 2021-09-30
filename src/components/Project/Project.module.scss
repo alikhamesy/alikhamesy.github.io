@@ -10,6 +10,7 @@
   object-fit: cover;
   display: block;
   border: 1px solid #000;
+  @include theme-background(#fff, #000);
 }
 
 .break {

@@ -9,3 +9,12 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 )
+
+let theme = 'light'
+document.documentElement.setAttribute('data-theme', theme)
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    theme = theme === 'light' ? 'dark' : 'light'
+    document.documentElement.setAttribute('data-theme', theme)
+  }
+})
