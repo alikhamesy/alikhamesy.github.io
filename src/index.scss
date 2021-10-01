@@ -22,22 +22,25 @@ $meta-color: #656565;
   @include font($font-size, 600);
 }
 
-@mixin theme-color($light-color, $dark-color) {
+@mixin theme($properties, $light, $dark) {
   [data-theme='light'] & {
-    color: $light-color;
+    @each $property in $properties {
+      #{$property}: $light;
+    }
   }
   [data-theme='dark'] & {
-    color: $dark-color;
+    @each $property in $properties {
+      #{$property}: $dark;
+    }
   }
 }
 
+@mixin theme-color($light-color, $dark-color) {
+  @include theme(color border-color, $light-color, $dark-color);
+}
+
 @mixin theme-background($light-background, $dark-background) {
-  [data-theme='light'] & {
-    background: $light-background;
-  }
-  [data-theme='dark'] & {
-    background: $dark-background;
-  }
+  @include theme(background, $light-background, $dark-background);
 }
 
 @mixin theme-flip($light-color, $dark-color) {
