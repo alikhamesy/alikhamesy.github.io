@@ -1,26 +1,35 @@
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import ExternalLink from '../ExternalLink'
 import Image from '../Image'
 import classNames from '../../utils/classNames'
+import { ScrollContext } from '../../contexts/ScrollLock'
 
 import styles from './Nav.module.scss'
 
 import logo from '../../assets/logo.svg'
 import { ReactComponent as MenuSVG } from '../../assets/menu.svg'
 
-const Menu = () => {
+const Menu = ({ onClick = () => {} }) => {
   return (
     <>
       <Link to='/'>
         <Image src={logo} className={styles.logo} alt="Ali's Logo" />
       </Link>
       <div className={styles.links}>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
-        <Link to='/work'>Work</Link>
+        <Link onClick={onClick} to='/'>
+          Home
+        </Link>
+        <Link onClick={onClick} to='/about'>
+          About
+        </Link>
+        <Link onClick={onClick} to='/work'>
+          Work
+        </Link>
         <ExternalLink href='/Ali Khamesy Resume.pdf'>Resume</ExternalLink>
-        <Link to='/gallery'>Gallery</Link>
+        <Link onClick={onClick} to='/gallery'>
+          Gallery
+        </Link>
       </div>
     </>
   )
@@ -28,12 +37,17 @@ const Menu = () => {
 
 const MobileNav = () => {
   const [isOpen, setOpen] = useState(false)
+  const { dispatch } = useContext(ScrollContext)
+
+  useEffect(() => {
+    dispatch({ type: isOpen ? 'LOCK' : 'UNLOCK' })
+  }, [isOpen])
 
   return (
     <div className={classNames(styles.mobile, isOpen && styles.open)}>
-      <div className={styles.background}></div>
+      <div className={styles.background} onClick={() => setOpen(false)}></div>
       <div className={styles.menu}>
-        <Menu />
+        <Menu onClick={() => setOpen(false)} />
       </div>
       <button onClick={() => setOpen(!isOpen)} className={styles.button}>
         <MenuSVG className={styles.icon} />
