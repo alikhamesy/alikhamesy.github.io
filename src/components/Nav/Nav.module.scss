@@ -1,11 +1,117 @@
 @use '../../index.scss' as *;
 
-.container {
-  width: 100%;
+.mobile {
+  .button,
+  .background,
+  .menu {
+    position: fixed;
+    z-index: 1;
+  }
+
+  .button {
+    right: 10px;
+    top: 10px;
+
+    .icon {
+      path {
+        transition: stroke-dashoffset 0.5s ease-in-out;
+        will-change: stroke-dashoffset;
+      }
+
+      :nth-child(1) {
+        stroke-dasharray: 61;
+        stroke-dashoffset: 42;
+      }
+      :nth-child(2) {
+        stroke-dasharray: 19;
+        stroke-dashoffset: 0;
+      }
+      :nth-child(3) {
+        stroke-dasharray: 68;
+        stroke-dashoffset: 49;
+      }
+    }
+  }
+
+  .background {
+    width: 100%;
+    height: 100%;
+    background: #00000060;
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    top: 0;
+  }
+
+  .menu {
+    width: 80%;
+    height: 100%;
+    right: -100%;
+    transition: right 0.5s ease-in-out;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+    background: #fff;
+
+    .links {
+      flex-direction: column;
+      gap: 34px;
+      align-items: center;
+    }
+  }
+
+  &.open {
+    .background {
+      opacity: 1;
+    }
+
+    .menu {
+      right: 0;
+    }
+
+    .icon {
+      :nth-child(1) {
+        stroke-dashoffset: -42;
+      }
+      :nth-child(2) {
+        stroke-dashoffset: -19;
+      }
+      :nth-child(3) {
+        stroke-dashoffset: -49;
+      }
+    }
+  }
+}
+
+.desktop {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
+
+  a {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      right: 0;
+      background: $meta-color;
+      transition: width 0.2s ease-in-out 0s;
+    }
+
+    &:hover::before {
+      width: 100%;
+      left: 0;
+      transition: width 0.2s ease-in-out 0s;
+    }
+  }
 }
 
 .logo {

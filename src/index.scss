@@ -3,6 +3,12 @@ $meta-color: #656565;
 @mixin main-column() {
   width: clamp(850px, 85%, 1250px);
   margin: auto;
+
+  @media (max-width: 850px) {
+    & {
+      width: 100%;
+    }
+  }
 }
 
 @mixin font($font-size: 22px, $font-weight: 400) {
