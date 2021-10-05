@@ -5,14 +5,26 @@ import sap from './sap.svg'
 import pacmacro from './pacmacro.svg'
 import git from './parse.svg'
 import polar from './polar.png'
-import wave from './wave.png'
 import analyzer from './analyzer.png'
 
 const galleryResolver = require.context('./gallery', false, /.*\.jpg/)
+const galleryPhotos = [
+  'lambo',
+  'buildings',
+  'mars',
+  'tokyo-neighborhood',
+  'tokyo-skyline',
+  'tokyo-temple',
+  'tokyo-tower',
+  'sunset',
+  'waterfall',
+  'observatory'
+]
 
-export const gallery = galleryResolver
-  .keys()
-  .map(src => galleryResolver(src).default)
+export const gallery = galleryPhotos.map(photo => ({
+  thumb: galleryResolver(`./${photo}-thumb.jpg`).default,
+  highRes: galleryResolver(`./${photo}.jpg`).default
+}))
 
 const data = {
   gallery,

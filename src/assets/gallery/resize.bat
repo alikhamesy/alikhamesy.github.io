@@ -1,0 +1,1 @@
+ffmpeg -i "%1.jpg" -vf scale=%2 "%1-thumb.jpg"

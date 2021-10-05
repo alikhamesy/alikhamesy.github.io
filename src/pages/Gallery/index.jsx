@@ -12,14 +12,14 @@ const Gallery = () => {
     <div className={styles.container}>
       {openPhoto >= 0 && (
         <Modal onClose={() => setOpenPhotos(-1)}>
-          <Image src={gallery[openPhoto]} className={styles.modalImg} />
+          <Image src={gallery[openPhoto].highRes} className={styles.modalImg} />
         </Modal>
       )}
       <div className={styles.title}>
         In my spare time, I like to take random pictures, here are a few.
       </div>
       <div className={styles.gallery}>
-        {gallery.map((src, index) => (
+        {gallery.map(({ thumb: src }, index) => (
           <button
             key={src}
             className={styles.button}

@@ -1,7 +1,7 @@
 $meta-color: #656565;
 
 @mixin main-column() {
-  width: clamp(950px, 85%, 1250px);
+  width: clamp(850px, 85%, 1250px);
   margin: auto;
 }
 
