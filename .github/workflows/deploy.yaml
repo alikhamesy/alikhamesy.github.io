@@ -21,7 +21,6 @@ jobs:
           git config --global user.name 'Ali Khamesy'
           git config --global user.email 'alikhamesy0@gmail.com'
           git fetch
-          git checkout deployment
           git pull
 
       - name: Install Dependencies
@@ -42,4 +41,4 @@ jobs:
         run: |-
           git add .
           git commit -m "[Automated] Deploy build"
-          git push
+          git push -f origin deployment
