@@ -19,6 +19,7 @@ jobs:
       - name: Checkout
         run: |-
           git switch -c deployment
+          git pull
 
       - name: Install Dependencies
         run: |-

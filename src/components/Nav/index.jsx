@@ -9,6 +9,7 @@ import styles from './Nav.module.scss'
 
 import logo from '../../assets/logo.svg'
 import { ReactComponent as MenuSVG } from '../../assets/menu.svg'
+import { LINKS } from '../../assets/data'
 
 const Menu = ({ onClick = () => {}, showSocials }) => {
   return (
@@ -29,17 +30,19 @@ const Menu = ({ onClick = () => {}, showSocials }) => {
         <Link onClick={onClick} to='/gallery'>
           Gallery
         </Link>
-        <ExternalLink href='/Ali Khamesy Resume.pdf'>Resume</ExternalLink>
+        <ExternalLink href={LINKS.resume.href}>
+          {LINKS.resume.display}
+        </ExternalLink>
         {showSocials && (
           <>
-            <ExternalLink href='mailto:alikhamesy0@gmail.com'>
-              Email
+            <ExternalLink href={LINKS.email.href}>
+              {LINKS.email.display}
             </ExternalLink>
-            <ExternalLink href='https://www.linkedin.com/in/ali-khamesy/'>
-              Linkedin
+            <ExternalLink href={LINKS.linkedin.href}>
+              {LINKS.linkedin.display}
             </ExternalLink>
-            <ExternalLink href='https://github.com/alikhamesy'>
-              GitHub
+            <ExternalLink href={LINKS.github.href}>
+              {LINKS.github.display}
             </ExternalLink>
           </>
         )}

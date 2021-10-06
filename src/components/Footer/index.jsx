@@ -1,5 +1,6 @@
 import Break from '../Break'
 import ExternalLink from '../ExternalLink'
+import { FOOTER, LINKS } from '../../assets/data'
 
 import styles from './Footer.module.scss'
 
@@ -8,17 +9,19 @@ const Footer = () => {
     <div className={styles.container}>
       <Break />
       <div className={styles.footer}>
-        <div className={styles.message}>
-          I made this website alone using React, Scss, GitHub Actions.
-        </div>
+        <div className={styles.message}>{FOOTER.message}</div>
         <div className={styles.links}>
-          <ExternalLink href='mailto:alikhamesy0@gmail.com'>Email</ExternalLink>
-          <ExternalLink href='/Ali Khamesy Resume.pdf'>Resume</ExternalLink>
-          <ExternalLink href='https://www.linkedin.com/in/ali-khamesy/'>
-            Linkedin
+          <ExternalLink href={LINKS.email.href}>
+            {LINKS.email.display}
           </ExternalLink>
-          <ExternalLink href='https://github.com/alikhamesy'>
-            GitHub
+          <ExternalLink href={LINKS.resume.href}>
+            {LINKS.resume.display}
+          </ExternalLink>
+          <ExternalLink href={LINKS.linkedin.href}>
+            {LINKS.linkedin.display}
+          </ExternalLink>
+          <ExternalLink href={LINKS.github.href}>
+            {LINKS.github.display}
           </ExternalLink>
         </div>
       </div>

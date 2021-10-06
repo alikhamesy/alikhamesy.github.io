@@ -2,13 +2,13 @@ import Projects from '../../components/Projects'
 
 import styles from './Work.module.scss'
 
-import { projects } from '../../assets/data'
+import { PROJECTS } from '../../assets/data'
 
 const Work = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.projects}>All the projects I've worked on.</div>
-      <Projects projects={projects} />
+      <div className={styles.projects}>{PROJECTS.title}</div>
+      <Projects projects={PROJECTS.list} />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { gallery } from '../../assets/data'
+import { GALLERY } from '../../assets/data'
 import Image from '../../components/Image'
 import Modal from '../../components/Modal'
 
@@ -12,14 +12,15 @@ const Gallery = () => {
     <div className={styles.container}>
       {openPhoto >= 0 && (
         <Modal onClose={() => setOpenPhotos(-1)}>
-          <Image src={gallery[openPhoto].highRes} className={styles.modalImg} />
+          <Image
+            src={GALLERY.sources[openPhoto].highRes}
+            className={styles.modalImg}
+          />
         </Modal>
       )}
-      <div className={styles.title}>
-        In my spare time, I like to take random pictures, here are a few.
-      </div>
+      <div className={styles.title}>{GALLERY.title}</div>
       <div className={styles.gallery}>
-        {gallery.map(({ thumb: src }, index) => (
+        {GALLERY.sources.map(({ thumb: src }, index) => (
           <button
             key={src}
             className={styles.button}
