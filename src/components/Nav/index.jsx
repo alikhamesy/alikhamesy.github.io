@@ -51,6 +51,7 @@ const MobileNav = () => {
 
   useEffect(() => {
     dispatch({ type: isOpen ? 'LOCK' : 'UNLOCK' })
+    // eslint-disable-next-line
   }, [isOpen])
 
   const onNavigate = () => {

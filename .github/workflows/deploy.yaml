@@ -13,9 +13,10 @@ jobs:
   setup-build-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-
     steps:
+      - name: Start
       - uses: actions/checkout@v2
+
       - name: Checkout
       - run: |-
           git checkout deployment
