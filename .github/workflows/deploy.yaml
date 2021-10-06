@@ -20,8 +20,8 @@ jobs:
         run: |-
           git config --global user.name 'Ali Khamesy'
           git config --global user.email 'alikhamesy0@gmail.com'
-          git switch -c deployment
-          git branch --set-upstream-to=origin/deployment deployment
+          git fetch
+          git checkout deployment
           git pull
 
       - name: Install Dependencies
