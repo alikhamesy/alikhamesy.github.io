@@ -28,7 +28,7 @@ jobs:
       - name: Build
         run: |-
           npm run build
-          find . -depth -mindepth 1 ! -regex '^\(./build\(/.*\)?\|./README.md\)' -delete
+          find . -depth -mindepth 1 ! -regex '^\(./build\(/.*\)?\|./README.md\|./\..*\)' -delete
           mv build/* .
           rmdir build
           cp index.html 404.html
