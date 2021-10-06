@@ -18,7 +18,10 @@ jobs:
 
       - name: Checkout
         run: |-
+          git config --global user.name 'Ali Khamesy'
+          git config --global user.email 'alikhamesy0@gmail.com'
           git switch -c deployment
+          git branch --set-upstream-to=origin/deployment deployment
           git pull
 
       - name: Install Dependencies
@@ -37,8 +40,6 @@ jobs:
 
       - name: Deploy
         run: |-
-          git config --global user.name 'Ali Khamesy'
-          git config --global user.email 'alikhamesy0@gmail.com'
           git add .
           git commit -m "[Automated] Deploy build"
-          git push --set-upstream origin deployment
+          git push
