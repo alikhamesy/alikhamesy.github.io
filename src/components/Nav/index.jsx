@@ -10,10 +10,10 @@ import styles from './Nav.module.scss'
 import logo from '../../assets/logo.svg'
 import { ReactComponent as MenuSVG } from '../../assets/menu.svg'
 
-const Menu = ({ onClick = () => {} }) => {
+const Menu = ({ onClick = () => {}, showSocials }) => {
   return (
     <>
-      <Link to='/'>
+      <Link onClick={onClick} to='/'>
         <Image src={logo} className={styles.logo} alt="Ali's Logo" />
       </Link>
       <div className={styles.links}>
@@ -26,10 +26,20 @@ const Menu = ({ onClick = () => {} }) => {
         <Link onClick={onClick} to='/work'>
           Work
         </Link>
-        <ExternalLink href='/Ali Khamesy Resume.pdf'>Resume</ExternalLink>
         <Link onClick={onClick} to='/gallery'>
           Gallery
         </Link>
+        <ExternalLink href='/Ali Khamesy Resume.pdf'>Resume</ExternalLink>
+        {showSocials && (
+          <>
+            <ExternalLink href='mailto:alikhamesy0@gmail.com'>
+              Email
+            </ExternalLink>
+            <ExternalLink href='https://www.linkedin.com/in/ali-khamesy/'>
+              Linkedin
+            </ExternalLink>
+          </>
+        )}
       </div>
     </>
   )
@@ -43,11 +53,16 @@ const MobileNav = () => {
     dispatch({ type: isOpen ? 'LOCK' : 'UNLOCK' })
   }, [isOpen])
 
+  const onNavigate = () => {
+    setOpen(false)
+    window.scrollTo(0, 0)
+  }
+
   return (
     <div className={classNames(styles.mobile, isOpen && styles.open)}>
       <div className={styles.background} onClick={() => setOpen(false)}></div>
       <div className={styles.menu}>
-        <Menu onClick={() => setOpen(false)} />
+        <Menu onClick={onNavigate} showSocials />
       </div>
       <button onClick={() => setOpen(!isOpen)} className={styles.button}>
         <MenuSVG className={styles.icon} />

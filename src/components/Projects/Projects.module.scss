@@ -1,12 +1,22 @@
+@use "../../index.scss" as *;
+
 .container {
   width: 100%;
-}
 
-.project {
-  width: 100%;
-  padding-bottom: 90px;
-}
+  .project {
+    width: 100%;
+    padding-bottom: 90px;
 
-.project:last-child {
-  padding-bottom: 150px;
+    @include mobile {
+      padding-bottom: 60px;
+    }
+  }
+
+  .project:last-child {
+    padding-bottom: 150px;
+
+    @include mobile {
+      padding-bottom: 90px;
+    }
+  }
 }

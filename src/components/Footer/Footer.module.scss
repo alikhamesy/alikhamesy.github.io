@@ -2,22 +2,37 @@
 
 .container {
   width: 100%;
-}
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 0 165px;
-}
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 165px;
+    width: 100%;
 
-.message {
-  @include regular(18px);
-}
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 60px;
+    }
 
-.links {
-  @include semiBold(18px);
-  color: $meta-color;
-  display: flex;
-  gap: 65px;
+    .message {
+      @include regular(16px);
+      width: 100%;
+    }
+
+    .links {
+      @include semiBold(18px);
+      color: $meta-color;
+      display: flex;
+      gap: 65px;
+
+      @include mobile {
+        padding-top: 20px;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+  }
 }

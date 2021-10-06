@@ -5,16 +5,29 @@
   .background,
   .menu {
     position: fixed;
-    z-index: 1;
+  }
+
+  .menu,
+  .background {
+    z-index: -1;
+  }
+
+  .button {
+    z-index: 3;
   }
 
   .button {
     right: 10px;
     top: 10px;
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    transition: z-index 1s 0.5s;
 
     .icon {
       path {
-        transition: stroke-dashoffset 0.5s ease-in-out;
+        transition: stroke-dashoffset 0.5s cubic-bezier(0.18, 0.54, 0.65, 1);
         will-change: stroke-dashoffset;
       }
 
@@ -34,20 +47,22 @@
   }
 
   .background {
-    width: 100%;
-    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
     background: #00000060;
     backdrop-filter: blur(3px);
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    top: 0;
+    transition: opacity 0.5s ease-in-out, z-index 1s 0.5s;
   }
 
   .menu {
     width: 80%;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     right: -100%;
-    transition: right 0.5s ease-in-out;
+    transition: right 0.5s ease-in-out, z-index 1s 0.5s;
     top: 0;
     display: flex;
     flex-direction: column;
@@ -64,12 +79,20 @@
   }
 
   &.open {
+    .menu,
+    .background {
+      z-index: 1;
+      transition: z-index 1s;
+    }
+
     .background {
       opacity: 1;
+      transition: opacity 0.5s ease-in-out, z-index 1s 0s;
     }
 
     .menu {
       right: 0;
+      transition: right 0.5s ease-in-out, z-index 1s 0s;
     }
 
     .icon {

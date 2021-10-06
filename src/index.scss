@@ -1,18 +1,26 @@
 $meta-color: #656565;
+$mobile-break: 850px;
+$font-family: 'IBM Plex Sans', sans-serif;
+
+@mixin mobile {
+  @media (max-width: $mobile-break) {
+    & {
+      @content;
+    }
+  }
+}
 
 @mixin main-column() {
   width: clamp(850px, 85%, 1250px);
   margin: auto;
 
-  @media (max-width: 850px) {
-    & {
-      width: 100%;
-    }
+  @include mobile {
+    width: 90%;
   }
 }
 
 @mixin font($font-size: 22px, $font-weight: 400) {
-  font: $font-weight $font-size 'IBM Plex Sans', sans-serif;
+  font: $font-weight $font-size $font-family;
   letter-spacing: 0.03em;
 }
 
@@ -26,6 +34,12 @@ $meta-color: #656565;
 
 @mixin semiBold($font-size) {
   @include font($font-size, 600);
+}
+
+@mixin mobileFont($font-size) {
+  @include mobile {
+    font-size: $font-size;
+  }
 }
 
 @mixin theme($properties, $light, $dark) {
