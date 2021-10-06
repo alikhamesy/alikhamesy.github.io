@@ -36,8 +36,8 @@ jobs:
 
       - name: Deploy
         run: |-
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-username@users.noreply.github.com'
+          git config --global user.name 'Ali Khamesy'
+          git config --global user.email 'alikhamesy0@gmail.com'
           git add .
           git commit -m "[Automated] Deploy build"
           git push --set-upstream origin deployment
