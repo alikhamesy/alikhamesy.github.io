@@ -34,6 +34,7 @@ jobs:
 
       - name: Switch to deployment branch
         run: |-
+          git checkout deployment
           find . -depth -mindepth 1 ! -regex '^\(./build\(/.*\)?\|./README.md\|./\..*\)' -delete
           mv build/* .
           rmdir build
