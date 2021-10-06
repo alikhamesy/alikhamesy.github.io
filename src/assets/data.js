@@ -46,7 +46,7 @@ export const LINKS = {
 
 export const HOME = {
   header: `Hi I’m Ali, a 4th Year Computer Science Student based out of Vancouver who’s interested in Software Development.`,
-  subHeader: `Previously at Microsoft & SAP maybe there are more things you want to say here.`,
+  subHeader: `Previously interned at Microsoft & SAP maybe there are more things you want to say here.`,
   work: 'Selected Work',
   workTogether: 'Want to Work Together?',
   lookingFor:

@@ -30,11 +30,14 @@ jobs:
       - name: Build
         run: |-
           npm run build
+        working-directory: ./
+
+      - name: Switch to deployment branch
+        run: |-
           find . -depth -mindepth 1 ! -regex '^\(./build\(/.*\)?\|./README.md\|./\..*\)' -delete
           mv build/* .
           rmdir build
           cp index.html 404.html
-        working-directory: ./
 
       - name: Deploy
         run: |-
