@@ -38,6 +38,9 @@ const Menu = ({ onClick = () => {}, showSocials }) => {
             <ExternalLink href='https://www.linkedin.com/in/ali-khamesy/'>
               Linkedin
             </ExternalLink>
+            <ExternalLink href='https://github.com/alikhamesy'>
+              GitHub
+            </ExternalLink>
           </>
         )}
       </div>

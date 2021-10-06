@@ -54,7 +54,7 @@
     background: #00000060;
     backdrop-filter: blur(3px);
     opacity: 0;
-    transition: opacity 0.5s ease-in-out, z-index 1s 0.5s;
+    transition: opacity 0.5s ease-in-out, z-index 0s 0.5s;
   }
 
   .menu {
@@ -62,7 +62,7 @@
     top: 0;
     bottom: 0;
     right: -100%;
-    transition: right 0.5s ease-in-out, z-index 1s 0.5s;
+    transition: right 0.5s ease-in-out, z-index 0s 0.5s;
     top: 0;
     display: flex;
     flex-direction: column;
@@ -81,18 +81,18 @@
   &.open {
     .menu,
     .background {
-      z-index: 1;
+      z-index: 2;
       transition: z-index 1s;
     }
 
     .background {
       opacity: 1;
-      transition: opacity 0.5s ease-in-out, z-index 1s 0s;
+      transition: opacity 0.5s ease-in-out, z-index 0s 0s;
     }
 
     .menu {
       right: 0;
-      transition: right 0.5s ease-in-out, z-index 1s 0s;
+      transition: right 0.5s ease-in-out, z-index 0s 0s;
     }
 
     .icon {
@@ -115,7 +115,7 @@
   align-items: center;
   padding-top: 50px;
 
-  a {
+  .links a {
     position: relative;
 
     &::before {
