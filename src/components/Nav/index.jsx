@@ -88,12 +88,12 @@ const DesktopNav = () => {
 
 const Nav = () => {
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia('(max-width: 900px)').matches
+    window.matchMedia('(max-width: 875px)').matches
   )
 
   useEffect(() => {
     const checkWidth = e => {
-      const mobileCheck = window.matchMedia('(max-width: 900px)').matches
+      const mobileCheck = window.matchMedia('(max-width: 875px)').matches
       if (isMobile !== mobileCheck) setIsMobile(mobileCheck)
     }
 

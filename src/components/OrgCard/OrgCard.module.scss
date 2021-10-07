@@ -8,19 +8,16 @@
 
   @include mobile {
     flex-direction: column;
+    max-width: 300px;
   }
 
   .break {
-    margin: 10px 0;
+    margin: 20px 0;
     display: none;
 
     @include mobile {
       display: block;
     }
-  }
-
-  &:last-child .break {
-    display: none;
   }
 
   .logo {
@@ -35,11 +32,13 @@
 
   .name {
     @include medium(48px);
-    @include mobileFont(32px);
-    flex: 2;
+    @include mobileFont(28px);
     padding-left: 80px;
+    flex: 2;
     @include mobile {
-      padding: 20px 0;
+      padding: 0;
+      width: 100%;
+      flex: unset;
     }
   }
 
@@ -47,5 +46,11 @@
     @include regular(22px);
     @include mobileFont(18px);
     flex: 3;
+
+    @include mobile {
+      width: 100%;
+      margin-top: 15px;
+      flex: 1;
+    }
   }
 }

@@ -8,9 +8,9 @@ const OrgCard = ({ src, name, description }) => {
     <>
       <div className={styles.container}>
         <Image className={styles.logo} src={src} alt={`logo of ${name}`} />
+        <Break className={styles.break} />
         <div className={styles.name}>{name}</div>
         <div className={styles.description}>{description}</div>
-        <Break className={styles.break} />
       </div>
     </>
   )

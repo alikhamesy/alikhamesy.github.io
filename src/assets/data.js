@@ -46,7 +46,7 @@ export const LINKS = {
 
 export const HOME = {
   header: `Hi I’m Ali, a 4th Year Computer Science Student based out of Vancouver who’s interested in Software Development.`,
-  subHeader: `Previously interned at Microsoft & SAP maybe there are more things you want to say here.`,
+  subHeader: `Previously interned at Microsoft & SAP, motivated and more curious everyday.`,
   work: 'Selected Work',
   workTogether: 'Want to Work Together?',
   lookingFor:
@@ -58,13 +58,15 @@ export const PROJECTS = {
   list: [
     {
       src: wts,
+      href: 'https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WebTemplateStudio-dev-nightly',
       name: 'Internship @ Microsoft',
       description:
-        'Reduced overhead in creating full stack web apps by creating Web Template Studio.',
+        'Reduced overhead in creating full stack web apps by creating Web Template Studio with 70,000+ downloads.',
       chips: ['React', 'Typescript', 'Redux', 'Vue', 'HTML/CSS']
     },
     {
       src: onedrive,
+      href: 'https://www.microsoft.com/en-ca/microsoft-365/onedrive/online-cloud-storage',
       name: 'Internship @ Microsoft',
       description:
         'Greatly improved user experience on OneDrive Mobile by creating zero term query features.',
@@ -72,6 +74,7 @@ export const PROJECTS = {
     },
     {
       src: sap,
+      href: 'https://www.sap.com/products/cloud-analytics.html',
       name: 'Internship @ SAP',
       description:
         'Improving and reimagining UI development for SAP Analytics Cloud. Creating highly requested customer features.',
@@ -79,6 +82,7 @@ export const PROJECTS = {
     },
     {
       src: git,
+      href: 'https://github.com/sergeyt/parse-diff',
       name: 'parse-diff',
       description:
         'Contributed to the open source JS tool parse-diff with 300,000 weekly downloads on NPM which can parse git diffs for easier manipulation and displaying.',
@@ -86,14 +90,16 @@ export const PROJECTS = {
     },
     {
       src: stormhacks,
+      href: 'https://stormhacks.com',
       name: 'StormHacks Website',
       description:
-        'Lead development of the StormHacks website for over 1000 applicants and 10 sponsors to view.',
+        'Lead development of the StormHacks website for over 1,000 applicants and 10 sponsor organizations to view.',
       chips: ['React', 'JavaScript', 'HTML/CSS']
     },
     {
       src: analyzer,
       name: 'GitLab Analyzer',
+      href: 'https://github.com/alikhamesy/gitlab-analyzer',
       description:
         'Revolutionized marking software projects with GitLab Analyzer that provides an analyzed score as well as allowing markers to make notes and ignore meta files.',
       chips: ['Java', 'Spring Boot', 'TypeScript', 'React', 'MaterialUI']
@@ -101,6 +107,7 @@ export const PROJECTS = {
     {
       src: pacmacro,
       name: 'Pac Macro',
+      href: 'https://github.com/pacmacro',
       description:
         'Created a memorable experience for new university students by building Pac Macro, an augmented reality Pac Man game played on a 6 block by 6 block grid in downtown Vancouver.',
       chips: ['React', 'Javascript', 'Nodejs', 'React Native', 'HTML/CSS']
@@ -108,6 +115,7 @@ export const PROJECTS = {
     {
       src: polar,
       name: 'Polar Plunge',
+      href: 'https://github.com/alikhamesy/game-jam-20',
       description:
         'Won the audience choice award by creating Polar Plunge, a top down game where the player, a blue whale, attempts to keep a group of baby polar bears on a sheet of ice while pushing them back to the glacier.',
       chips: ['Hackathon Winner', 'C#', 'Unity']
@@ -117,15 +125,7 @@ export const PROJECTS = {
 
 export const STORY = {
   title: 'My Story',
-  body: `I am currently a fourth year computer science student at Simon
-  Fraser University. Since grade eleven in highschool, I have been
-  drawn to computer science and programming. I’ve always been
-  extremely curious about the world and how different aspects of it
-  work, everything small and large from our solar system to the logic
-  behind street lights or metro trains. I started with a simple web
-  based chess game and fell in love with programming from the very
-  beginning. The urge for knowing how things worked quickly developed
-  a new curiosity for how things could be improved.`,
+  body: `Curiosity has been the driving force of my interests for all my life, and curiosity was the reason I originally got into computer science. I started with simple web development wanting to know how the internet worked. My first project was building chess with HTML, CSS, and Javascript in grade 11. From that project I know that CS is a good path and so I chose it for my degree. From there I got an internship in Microsoft which introduced me to React and proper software development. While my work has made me experienced in all things front end, my education with lots of low level courses like networking, embedded systems or operating systems has kept me well trained with C and Python as well. The more I’ve learned the more curious I’ve gotten, always passionate to keep exploring and expanding my knowledge of the field.`,
   activity: `What I'm up to.`
 }
 
@@ -139,14 +139,12 @@ export const COMPANIES = [
   {
     src: surge,
     name: 'SFU Surge',
-    description:
-      'One of the original founders of SFU Surge, Head of Finances and Development. Surge is a blah blah TODO'
+    description: `One of the original founders of SFU Surge, SFU's leading technology, innovation and career development club. Currently Head of Finances and Technical Development.`
   },
   {
     src: stormhacks,
     name: 'Stormhacks',
-    description:
-      "Running SFU's largest hackathon as head of finances and technical development. Setting up websites, domains, discord servers and custom written discord bots."
+    description: `Running SFU's largest hackathon as Head of Finances and Technical Development. Setting up websites, domains, discord servers and custom written discord bots.`
   }
 ]
 

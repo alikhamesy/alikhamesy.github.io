@@ -21,7 +21,7 @@ const About = () => {
       <Break />
       <div className={styles.activity}>
         <div className={styles.title}>{STORY.activity}</div>
-        <div className={styles.text}>
+        <div className={styles.activities}>
           {COMPANIES.map(props => (
             <OrgCard key={props.name} {...props} />
           ))}
