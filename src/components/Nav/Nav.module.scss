@@ -33,15 +33,15 @@
 
       :nth-child(1) {
         stroke-dasharray: 61;
-        stroke-dashoffset: 42;
+        stroke-dashoffset: 164;
       }
       :nth-child(2) {
         stroke-dasharray: 19;
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 38;
       }
       :nth-child(3) {
         stroke-dasharray: 68;
-        stroke-dashoffset: 49;
+        stroke-dashoffset: 185;
       }
     }
   }
@@ -97,13 +97,13 @@
 
     .icon {
       :nth-child(1) {
-        stroke-dashoffset: -42;
+        stroke-dashoffset: 80;
       }
       :nth-child(2) {
-        stroke-dashoffset: -19;
+        stroke-dashoffset: 19;
       }
       :nth-child(3) {
-        stroke-dashoffset: -49;
+        stroke-dashoffset: 87;
       }
     }
   }
