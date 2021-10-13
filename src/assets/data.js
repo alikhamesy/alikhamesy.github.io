@@ -45,7 +45,7 @@ export const LINKS = {
 }
 
 export const HOME = {
-  header: `Hi I’m Ali, a 4th Year Computer Science Student based out of Vancouver who’s interested in Software Development.`,
+  header: `Hi I’m Ali, a 4th year Computer Science student based out of Vancouver who’s interested in software development.`,
   subHeader: `Previously interned at Microsoft & SAP, motivated and more curious everyday.`,
   work: 'Selected Work',
   workTogether: 'Want to Work Together?',
@@ -144,7 +144,7 @@ export const COMPANIES = [
   {
     src: stormhacks,
     name: 'Stormhacks',
-    description: `Running SFU's largest hackathon as Head of Finances and Technical Development. Setting up websites, domains, discord servers and custom written discord bots.`
+    description: `Running SFU's largest hackathon as Head of Finances and Technical Development. Setting up websites, domains, Discord servers and custom written Discord bots.`
   }
 ]
 
