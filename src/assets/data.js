@@ -2,11 +2,11 @@ import wts from './wts.png'
 import stormhacks from './stormhacks.png'
 import onedrive from './onedrive.png'
 import sap from './sap.svg'
+import google from './google.svg'
 import pacmacro from './pacmacro.svg'
 import git from './parse.svg'
 import polar from './polar.png'
 import analyzer from './analyzer.png'
-import surge from './surge.svg'
 
 const galleryResolver = require.context('./gallery', false, /.*\.jpg/)
 const galleryPhotos = [
@@ -45,9 +45,10 @@ export const LINKS = {
 }
 
 export const HOME = {
-  header: `Hi I’m Ali, a 4th year Computer Science student based out of Vancouver who’s interested in software development.`,
-  subHeader: `Previously interned at Microsoft & SAP, motivated and more curious everyday.`,
+  header: `Hi I’m Ali, a Google Software Engineer working on Google Photos based out of Mountain View.`,
+  subHeader: `I've previously interned at Microsoft & SAP, motivated and more curious everyday.`,
   work: 'Selected Work',
+  lookingForWork: false,
   workTogether: 'Want to Work Together?',
   lookingFor:
     'Currently looking for software developer positions at companies who want to revolutionize and innovate for tomorrow.'
@@ -56,6 +57,14 @@ export const HOME = {
 export const PROJECTS = {
   title: `All the projects I've worked on.`,
   list: [
+    {
+      src: google,
+      href: 'https://www.google.com/photos/about/',
+      name: 'Software Engineer @ Google',
+      description:
+        "Making Google Photos truly a home for all photos by improving it's stability and efficiency.",
+      chips: ['Android', 'Java']
+    },
     {
       src: wts,
       href: 'https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WebTemplateStudio-dev-nightly',
@@ -131,20 +140,10 @@ export const STORY = {
 
 export const COMPANIES = [
   {
-    src: sap,
-    name: 'SAP',
+    src: google,
+    name: 'Google',
     description:
-      'Currently an iXp Software Developer Intern working on SAP Analytics Cloud.'
-  },
-  {
-    src: surge,
-    name: 'SFU Surge',
-    description: `One of the original founders of SFU Surge, SFU's leading technology, innovation and career development club. Currently Head of Finances and Technical Development.`
-  },
-  {
-    src: stormhacks,
-    name: 'Stormhacks',
-    description: `Running SFU's largest hackathon as Head of Finances and Technical Development. Setting up websites, domains, Discord servers and custom written Discord bots.`
+      'Currently a Software Engineer working on Google Photos Android.'
   }
 ]
 

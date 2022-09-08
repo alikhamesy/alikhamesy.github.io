@@ -16,10 +16,12 @@ const Home = () => {
       <div className={styles.projects}>{HOME.work}</div>
       <Projects projects={selectedProjects} />
       <Break />
-      <div className={styles.workTogether}>
-        <div className={styles.subject}>{HOME.workTogether}</div>
-        <div className={styles.message}>{HOME.lookingFor}</div>
-      </div>
+      {HOME.lookingForWork && (
+        <div className={styles.workTogether}>
+          <div className={styles.subject}>{HOME.workTogether}</div>
+          <div className={styles.message}>{HOME.lookingFor}</div>
+        </div>
+      )}
     </div>
   )
 }
