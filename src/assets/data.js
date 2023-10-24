@@ -159,6 +159,43 @@ export const selectedProjects = [
   PROJECTS.list[3]
 ]
 
-export const ARRIVAL = Date.parse('03 Nov 2023 00:20:00 PDT')
+export const EVENTS = [
+  {
+    time: Date.parse('03 Nov 2023 00:20:00 PDT'),
+    type: 'UNION'
+  },
+  {
+    time: Date.parse('04 Nov 2023 17:00:00 PST'),
+    type: 'TOGETHER'
+  },
+  {
+    time: Date.parse('10 Nov 2023 17:00:00 PST'),
+    type: 'SPLIT'
+  },
+  {
+    time: Date.parse('01 Dec 2023 00:30:00 PST'),
+    type: 'UNION'
+  },
+  {
+    time: Date.parse('08 Dec 2023 13:00:00 PST'),
+    type: 'TOGETHER'
+  },
+  {
+    time: Date.parse('10 Dec 2023 13:00:00 PST'),
+    type: 'SPLIT'
+  },
+  {
+    time: Date.parse('13 Dec 2023 19:00:00 PST'),
+    type: 'UNION'
+  },
+  {
+    time: Date.parse('07 Jan 2024 21:05:00 PST'),
+    type: 'TOGETHER'
+  },
+  {
+    time: Date.parse('09 Jan 2024 21:05:00 PST'),
+    type: 'SPLIT'
+  }
+]
 
 export default data
