@@ -29,6 +29,7 @@ jobs:
 
       - name: Build
         run: |-
+          export NODE_OPTIONS=--openssl-legacy-provider
           npm run build
         working-directory: ./
 
