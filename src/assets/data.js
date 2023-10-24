@@ -159,4 +159,6 @@ export const selectedProjects = [
   PROJECTS.list[3]
 ]
 
+export const ARRIVAL = Date.parse('03 Nov 2023 00:20:00 PDT')
+
 export default data

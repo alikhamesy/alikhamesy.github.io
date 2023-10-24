@@ -1,20 +1,19 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import Home from './pages/Home'
-import Nav from './components/Nav'
-import Footer from './components/Footer'
 import About from './pages/About'
 import Work from './pages/Work'
 import Gallery from './pages/Gallery'
+import Store from './pages/Store'
 import ScrollLockProvider from './contexts/ScrollLock'
 import ScrollContainer from './components/ScrollContainer'
+import NavProvider from './contexts/Nav'
 
 const App = () => {
   return (
     <ScrollLockProvider>
       <ScrollContainer>
-        <Router>
-          <Nav />
+        <NavProvider>
           <Switch>
             <Route path='/' exact>
               <Home />
@@ -28,9 +27,11 @@ const App = () => {
             <Route path='/gallery'>
               <Gallery />
             </Route>
+            <Route path='/wuv'>
+              <Store />
+            </Route>
           </Switch>
-          <Footer />
-        </Router>
+        </NavProvider>
       </ScrollContainer>
     </ScrollLockProvider>
   )

@@ -1,6 +1,5 @@
 $meta-color: #656565;
 $mobile-break: 875px;
-$font-family: 'IBM Plex Sans', sans-serif;
 
 @mixin mobile {
   @media (max-width: $mobile-break) {
@@ -19,8 +18,12 @@ $font-family: 'IBM Plex Sans', sans-serif;
   }
 }
 
-@mixin font($font-size: 22px, $font-weight: 400) {
-  font: $font-weight $font-size $font-family;
+@mixin font(
+  $font-size: 22px,
+  $font-weight: 400,
+  $font-family: 'IBM Plex Sans'
+) {
+  font: $font-weight $font-size $font-family, sans-serif;
   letter-spacing: 0.03em;
 }
 
@@ -75,6 +78,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: url('./assets/background.png') repeat;
   max-height: 100vh;
+  height: 100vh;
   max-width: 100vw;
   overflow: auto;
 
@@ -85,6 +89,7 @@ body {
 
 #root {
   @include main-column;
+  height: 100%;
 }
 
 code {

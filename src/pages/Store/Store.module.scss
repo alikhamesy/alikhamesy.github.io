@@ -1,0 +1,27 @@
+@use '../../index.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .title {
+    @include font(48px, 300, 'Open Sans');
+    @include mobileFont(36px);
+    text-align: center;
+    margin: 0 0 50px;
+  }
+
+  .time {
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    @include mobile {
+      max-width: 350px;
+      width: 90%;
+    }
+    justify-content: space-between;
+  }
+}
