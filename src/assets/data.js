@@ -63,7 +63,7 @@ export const PROJECTS = {
       name: 'Software Engineer @ Google',
       description:
         "Making Google Photos truly a home for all photos by improving it's stability and efficiency.",
-      chips: ['Android', 'Java']
+      chips: ['Android', 'Java', 'Kotlin', 'Espresso']
     },
     {
       src: wts,
@@ -161,7 +161,7 @@ export const selectedProjects = [
 
 export const EVENTS = [
   {
-    time: Date.parse('03 Nov 2023 00:20:00 PDT'),
+    time: Date.parse('02 Nov 2023 23:30:00 PDT'),
     type: 'UNION'
   },
   {
@@ -173,7 +173,7 @@ export const EVENTS = [
     type: 'SPLIT'
   },
   {
-    time: Date.parse('01 Dec 2023 00:30:00 PST'),
+    time: Date.parse('30 Nov 2023 23:30:00 PST'),
     type: 'UNION'
   },
   {

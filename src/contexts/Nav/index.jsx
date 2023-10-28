@@ -26,7 +26,6 @@ const reducer = (state, action) => {
 
 const NavProvider = ({ children }) => {
   const [nav, dispatch] = useReducer(reducer, initial)
-  console.log(nav)
   return (
     <NavContext.Provider value={{ nav, dispatch }}>
       <Router>
