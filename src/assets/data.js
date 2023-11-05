@@ -165,7 +165,7 @@ export const EVENTS = [
     type: 'UNION'
   },
   {
-    time: Date.parse('04 Nov 2023 17:00:00 PST'),
+    time: Date.parse('08 Nov 2023 17:00:00 PST'),
     type: 'TOGETHER'
   },
   {
