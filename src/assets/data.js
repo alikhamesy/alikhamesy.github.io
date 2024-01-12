@@ -194,6 +194,14 @@ export const EVENTS = [
   },
   {
     time: Date.parse('09 Jan 2024 21:05:00 PST'),
+    type: 'UNION'
+  },
+  {
+    time: Date.parse('18 Feb 2024 16:45:00 PST'),
+    type: 'TOGETHER'
+  },
+  {
+    time: Date.parse('20 Feb 2024 16:45:00 PST'),
     type: 'SPLIT'
   }
 ]
